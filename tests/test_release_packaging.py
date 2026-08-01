@@ -68,3 +68,13 @@ def test_release_dependencies_are_versioned_and_hash_locked():
     assert requirements
     assert all("==" in line for line in requirements)
     assert "--hash=sha256:" in lock
+
+
+def test_release_uses_patched_image_and_build_dependencies():
+    with (ROOT / "pyproject.toml").open("rb") as stream:
+        dependencies = tomllib.load(stream)["project"]["dependencies"]
+    release_input = (ROOT / "requirements-release.in").read_text(encoding="utf-8").casefold()
+
+    assert "Pillow>=12.3,<13" in dependencies
+    assert "pillow==12.3.0" in release_input
+    assert "setuptools==83.0.0" in release_input

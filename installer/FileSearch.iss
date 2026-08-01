@@ -1,6 +1,6 @@
 #define AppName "FileSearch"
 #ifndef AppVersion
-  #define AppVersion "0.1.0"
+  #define AppVersion "0.1.1"
 #endif
 #if Ver < EncodeVer(6, 3, 0)
   #error FileSearch requires Inno Setup 6.3.0 or later
