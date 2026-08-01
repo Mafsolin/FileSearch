@@ -1,0 +1,5 @@
+<!-- FileSearch application icon. -->
+<!-- Mark derived from the Lucide "bolt" icon (ISC) - see THIRD-PARTY-NOTICES.txt. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0f7d6b">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z M12 8a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"/>
+</svg>

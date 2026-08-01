@@ -1,0 +1,23 @@
+from __future__ import annotations
+
+from typing import Protocol
+
+
+class ProviderError(RuntimeError):
+    pass
+
+
+class EmbeddingProvider(Protocol):
+    model: str
+
+    def embed_texts(self, texts: list[str]) -> list[list[float]]: ...
+    def embed_text(self, text: str) -> list[float]: ...
+
+    def embed_pdf_page(self, pdf_bytes: bytes, filename: str) -> list[float]: ...
+
+    def embed_image(self, image_bytes: bytes, filename: str) -> list[float]: ...
+    def transcribe_image(self, image_bytes: bytes, filename: str) -> str: ...
+
+    def test_connection(self) -> int: ...
+
+    def close(self) -> None: ...
